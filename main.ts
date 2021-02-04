@@ -1,11 +1,9 @@
 input.onButtonPressed(Button.A, function () {
-    music.playMelody("C D E F G A B C5 ", 200)
     kitronik_smart_greenhouse.controlHighPowerPin(kitronik_smart_greenhouse.HighPowerPins.pin13, kitronik_smart_greenhouse.onOff(true))
     basic.pause(100)
     kitronik_smart_greenhouse.controlHighPowerPin(kitronik_smart_greenhouse.HighPowerPins.pin13, kitronik_smart_greenhouse.onOff(false))
 })
 let zipLEDs = kitronik_smart_greenhouse.createGreenhouseZIPDisplay(3)
-kitronik_smart_greenhouse.setBuzzerPin()
 kitronik_smart_greenhouse.setTime(0, 0, 0)
 zipLEDs = kitronik_smart_greenhouse.createGreenhouseZIPDisplay(8)
 let zipStick = zipLEDs.zipStickRange()
